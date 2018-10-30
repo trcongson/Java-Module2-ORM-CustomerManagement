@@ -2,6 +2,7 @@ package com.codegym.cms.controller;
 
 import com.codegym.cms.model.Customer;
 import com.codegym.cms.repository.CustomerRepository;
+import com.codegym.cms.repository.Repository;
 import com.codegym.cms.repository.impl.CustomerRepositoryImpl;
 import com.codegym.cms.service.CustomerService;
 import org.springframework.stereotype.Controller;
@@ -12,7 +13,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class CustomerController {
-    
+
+    private Repository<Customer> customerService;
+
     @GetMapping("/create-customer")
     public ModelAndView showCreateForm(){
         ModelAndView modelAndView = new ModelAndView("/customer/create");
