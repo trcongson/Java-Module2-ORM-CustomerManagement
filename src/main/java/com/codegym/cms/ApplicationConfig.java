@@ -45,7 +45,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     }
 
     @Bean
-    public CustomerRepository customerRopository(){
+    public CustomerRepository customerRepository(){
         return new CustomerRepositoryImpl();
     }
 
